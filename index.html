@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080c10">
+  <meta name="description" content="Vural & Burcu — Bir ömrün en tatlı telaşındayız; şahidimiz olun. Manisa · Salihli.">
+  <meta property="og:title" content="Vural & Burcu | Davetlisiniz">
+  <meta property="og:description" content="Bir ömre açılan kapı. Davetimizi açmak için dokunun.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/door.jpg">
+  <meta name="color-scheme" content="dark">
+  <title>Vural & Burcu · Bir Ömre Açılan Kapı</title>
+  <link rel="icon" href="assets/monogram.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/door.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-state="welcome">
+  <a class="skip-link" href="#davet">Doğrudan davete geç</a>
+  <main id="experience">
+    <section class="screen welcome" id="welcome" aria-labelledby="welcome-title">
+      <img class="scene-image welcome-image" src="assets/door.jpg" alt="Mağaranın içinde, arasından altın ışık sızan görkemli taş kapı" width="864" height="1536" fetchpriority="high">
+      <div class="welcome-shade" aria-hidden="true"></div>
+      <div class="wordmark" aria-hidden="true"><span>V</span><i></i><span>B</span></div>
+      <p class="overline welcome-overline">BİR ÖMRE AÇILAN KAPI</p>
+      <div class="welcome-copy">
+        <p class="small-location" data-location>MANİSA · SALİHLİ</p>
+        <h1 id="welcome-title">Vural <em>&</em> Burcu</h1>
+        <div class="ornament" aria-hidden="true"><span></span><b></b><span></span></div>
+        <p class="invitation-line">Bir hikâye, iki kalp, bir ömür.</p>
+        <button class="primary-button open-button" id="open-invitation" type="button">
+          <span>DAVETİ AÇ</span><span class="button-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p class="sound-hint">Bu hikâye sesle güzelleşir.</p>
+      </div>
+    </section>
+
+    <section class="screen cinema" id="cinema" aria-label="Sinematik davet filmi" hidden>
+      <video id="invitation-film" playsinline webkit-playsinline preload="metadata" poster="assets/door.jpg" aria-label="Taş kapının açıldığı ve mühürlü davet zarfının belirdiği film">
+        <source src="assets/film.mp4" type="video/mp4">
+        Tarayıcınız bu videoyu oynatamıyor.
+      </video>
+      <div class="film-loader" id="film-loader" role="status" hidden><span></span>Hikâyeniz açılıyor…</div>
+      <div class="cinema-controls">
+        <button class="quiet-button" id="sound-toggle" type="button" aria-pressed="false">Sesi kapat</button>
+        <button class="quiet-button" id="skip-film" type="button">Davete geç <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="film-progress" aria-hidden="true"><span id="film-progress"></span></div>
+    </section>
+
+    <section class="screen invitation" id="davet" aria-labelledby="couple-title" hidden>
+      <img class="scene-image invitation-background" src="assets/valley.jpg" alt="Gün batımında sütunlar, dağlar ve zeytin dallarıyla çevrili antik bir vadi" width="864" height="1536" loading="lazy">
+      <div class="invitation-shade" aria-hidden="true"></div>
+      <div class="invitation-content">
+        <p class="overline">HİKÂYEMİZE DAVETLİSİNİZ</p>
+        <article class="letter" aria-label="Vural ve Burcu'nun daveti">
+          <div class="letter-inner">
+            <div class="letter-mark" aria-hidden="true">V<span>/</span>B</div>
+            <p class="letter-kicker">İKİ YOL, BİR ÖMÜR.</p>
+            <h2 id="couple-title">Vural <em>&</em><br>Burcu</h2>
+            <div class="ornament dark" aria-hidden="true"><span></span><b></b><span></span></div>
+            <p class="letter-message">Bir ömrün en tatlı telaşındayız;<br>şahidimiz olun.</p>
+            <p class="letter-location" data-location>MANİSA · SALİHLİ</p>
+            <dl class="event-details" id="event-details" hidden></dl>
+          </div>
+        </article>
+        <div class="invitation-actions">
+          <button class="primary-button share-button" id="share-invitation" type="button">DAVETİ PAYLAŞ <span aria-hidden="true">↗</span></button>
+          <button class="quiet-button replay-button" id="replay-film" type="button">Filmi yeniden izle <span aria-hidden="true">↺</span></button>
+          <a class="quiet-button download-button" href="assets/film.mp4" download="Vural-Burcu-Davet.mp4">Videoyu indir</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="noscript-message">Vural & Burcu · Manisa — Salihli<br>Bir ömrün en tatlı telaşındayız; şahidimiz olun.<br><a href="assets/film.mp4">Davet filmini izle</a></div></noscript>
+</body>
+</html>
